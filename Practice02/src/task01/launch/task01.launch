@@ -3,5 +3,5 @@
 		pkg="task01"
 		exec="task01"
 		output="screen"
-	>
+	/>
 </launch>
