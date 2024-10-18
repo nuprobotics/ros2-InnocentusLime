@@ -4,7 +4,7 @@ from rclpy.node import Node
 
 class TopicsNode(Node):
 	def __init__(self):
-			super(TopicsNode, self).__init__('imposter')
+			super(TopicsNode, self).__init__('receiver')
 			self.subscriber = self.create_subscription(String,
 				'/spgc/sender',
 				self.subscriber_callback,
