@@ -17,6 +17,7 @@ def main():
 	rclpy.init()
 	node = TopicsNode()
 	rclpy.spin(node)
+	rclpy.destroy()
 	rclpy.shutdown()
 
 if __name__ == '__main__':
