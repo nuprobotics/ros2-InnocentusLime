@@ -1,0 +1,10 @@
+<launch>
+	<node
+		pkg="task02"
+		exec="task02"
+		output="screen"
+	>
+	<param name="text" value="$(var text)"/>
+	<param from="$(find-pkg-share task02)/config/task02.yaml"/>
+	</node>
+</launch>
