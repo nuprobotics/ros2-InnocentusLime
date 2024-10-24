@@ -10,7 +10,7 @@ class TopicsNode(Node):
 			
 			# Interface setup
 			self.declare_parameter("text", FALLBACK_MESSAGE)
-			self.declare_parameter("topic_name", "/sgpc/receiver")
+			self.declare_parameter("topic_name", "/spgc/receiver")
 
 			# Runtime setup
 			self.msg = self.get_parameter("text").get_parameter_value().string_value
