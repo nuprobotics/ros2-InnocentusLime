@@ -1,4 +1,6 @@
 <launch>
+  <arg name="text" default="Hello, ROS2!" />
+
 	<node
 		pkg="task02"
 		exec="task02"
