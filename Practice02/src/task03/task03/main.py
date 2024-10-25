@@ -29,10 +29,11 @@ class TopicsNode(Node):
 			
   def proxy_callback(self, request, response):
     response.success = True
-    response.message = self.default_response
 
     if self.fetched_response is not None:
       response.message = self.fetched_response
+    else:
+      response.message = self.default_response
 
     return response
 
