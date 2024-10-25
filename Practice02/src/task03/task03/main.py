@@ -21,8 +21,8 @@ class TopicsNode(Node):
     #self.timer = self.create_timer(0.5, self.probe_callback)
 			
   def proxy_callback(self, request, response):
-		response.success = True
-		response.message = self.default_response
+    response.success = True
+    response.message = self.default_response
 
     if not self.called_service.wait_for_service(timeout_sec=1.0):
       result = self.called_service.call_async(Trigger.Request())
@@ -34,11 +34,11 @@ class TopicsNode(Node):
 	#def probe_callback(self): pass
 
 def main():
-	rclpy.init()
-	node = TopicsNode()
-	rclpy.spin(node)
-	rclpy.destroy()
-	rclpy.shutdown()
+  rclpy.init()
+  node = TopicsNode()
+  rclpy.spin(node)
+  rclpy.destroy()
+  rclpy.shutdown()
 
 if __name__ == '__main__':
-	main()
+  main()
