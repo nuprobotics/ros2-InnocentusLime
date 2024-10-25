@@ -6,9 +6,9 @@ from std_srvs.srv import Trigger
 FALLBACK_MESSAGE = "I lost my pants"
 
 class TopicsNode(Node):
-	def __init__(self):
+  def __init__(self):
     super(TopicsNode, self).__init__('drug')
-			
+
     # Interface setup
     self.declare_parameter("default_string", FALLBACK_MESSAGE)
     self.declare_parameter("service_name", "/trigger_service")
