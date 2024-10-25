@@ -22,7 +22,7 @@ class TopicsNode(Node):
     #self.timer = self.create_timer(0.5, self.probe_callback)
 
 		# Query the service
-    if not self.called_service.wait_for_service(timeout_sec=1.0):
+    if self.called_service.wait_for_service(timeout_sec=1.0):
       result = self.called_service.call_async(Trigger.Request())
       rclpy.spin_until_future_complete(self, result)
       self.fetched_response = result.result().message
