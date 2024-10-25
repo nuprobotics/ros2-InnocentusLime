@@ -17,7 +17,7 @@ class TopicsNode(Node):
     self.default_response = self.get_parameter("default_string").get_parameter_value().string_value
     self.provided_service_name = self.get_parameter("service_name").get_parameter_value().string_value
     self.called_service = self.create_client(Trigger, "/spgc/trigger")
-    self.provided_service = self.create_service(Trigger, self.service_name, self.proxy_callback)
+    self.provided_service = self.create_service(Trigger, self.provided_service_name, self.proxy_callback)
     self.fetched_response = None
     #self.timer = self.create_timer(0.5, self.probe_callback)
 
