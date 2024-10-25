@@ -20,7 +20,7 @@ class TopicsNode(Node):
     self.provided_service = self.create_service(Trigger, self.service_name, self.proxy_callback)
     #self.timer = self.create_timer(0.5, self.probe_callback)
 			
-	def proxy_callback(self, request, response):
+  def proxy_callback(self, request, response):
 		response.success = True
 		response.message = self.default_response
 
